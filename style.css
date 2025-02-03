@@ -1,0 +1,99 @@
+/* General Styles */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #121212;
+  color: #fff;
+}
+
+.navbar {
+  background-color: #121212;
+}
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('assets/images/mohammad-rahmani-W-LQbAUhE64-unsplash.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.btn-orange {
+  background-color: #ff6f00;
+  border-color: #ff6f00;
+  color: #fff;
+}
+
+.btn-orange:hover {
+  background-color: #e65c00;
+  border-color: #e65c00;
+}
+
+.btn-outline-orange {
+  border: 2px solid #ff6f00;
+  color: #ff6f00;
+}
+
+.btn-outline-orange:hover {
+  background-color: #ff6f00;
+  color: #fff;
+}
+
+.bg-dark-tone {
+  background-color: #121212;
+}
+
+.bg-light-dark {
+  background-color: #1e1e1e;
+}
+
+.text-orange {
+  color: #ff6f00;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+.profile-image {
+  width: 225px; /* Set a fixed width */
+  height: 225px; /* Set the same value for height to make it square */
+  object-fit: cover; /* Ensures the image fills the container without distortion */
+  border-radius: 50%;
+  border: 3px dotted #ff6f00; /* Ensures the image remains circular */
+  padding: 6px; /* Approximate 1 cm gap */
+}
+
+
+
+/* Navbar Styles */
+.navbar-nav .nav-link {
+  position: relative;
+  color: #fff; /* Default text color */
+  text-decoration: none;
+  transition: color 0.3s ease-in-out; /* Smooth color transition */
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* Position the underline slightly below the text */
+  width: 0;
+  height: 2px; /* Thickness of the underline */
+  background-color: #ff6f00; /* Orange underline color */
+  transition: width 0.3s ease-in-out; /* Smooth width transition */
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%; /* Expand the underline to full width on hover */
+}
+
+.navbar-nav .nav-link.active {
+  color: #ff6f00; 
+}
+
+.navbar-nav .nav-link.active::after {
+  width: 100%; /* Keep the underline visible for the active link */
+}
