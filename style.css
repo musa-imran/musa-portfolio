@@ -11,7 +11,7 @@ body {
 
 .hero {
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('assets/images/mohammad-rahmani-W-LQbAUhE64-unsplash.jpg') no-repeat center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('assets/images/1351760.png') no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
