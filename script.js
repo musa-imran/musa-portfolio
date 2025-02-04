@@ -32,3 +32,35 @@
       }
     });
   });
+
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(() => {
+      document.getElementById("preloader").style.display = "none";
+    }, 3000); // Matches the total animation time
+  });
+
+  
+
+  document.addEventListener("DOMContentLoaded", function () {
+    let counters = document.querySelectorAll(".counter");
+    let speed = 200; // Counter speed
+  
+    counters.forEach(counter => {
+      let updateCount = () => {
+        let target = +counter.getAttribute("data-count");
+        let count = +counter.innerText;
+        let increment = target / speed;
+  
+        if (count < target) {
+          counter.innerText = Math.ceil(count + increment);
+          setTimeout(updateCount, 20);
+        } else {
+          counter.innerText = target;
+        }
+      };
+      updateCount();
+    });
+  });
+  
