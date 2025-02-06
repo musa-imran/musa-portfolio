@@ -63,4 +63,45 @@
       updateCount();
     });
   });
+
+  
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const projectModal = new bootstrap.Modal(document.getElementById("projectModal"));
+  
+    document.querySelectorAll(".view-details-btn").forEach(button => {
+      button.addEventListener("click", function () {
+        const title = this.getAttribute("data-title");
+        const images = JSON.parse(this.getAttribute("data-images"));
+  
+        document.getElementById("projectModalLabel").textContent = title;
+  
+        // Populate Carousel
+        const carouselInner = document.getElementById("carouselImages");
+        const imageDescription = document.getElementById("imageDescription");
+        carouselInner.innerHTML = ""; // Clear existing images
+  
+        images.forEach((img, index) => {
+          const activeClass = index === 0 ? "active" : "";
+          carouselInner.innerHTML += `
+            <div class="carousel-item ${activeClass}" data-description="${img.desc}">
+              <img src="${img.src}" class="d-block w-100" alt="${title}">
+            </div>
+          `;
+        });
+  
+        // Set initial image description
+        imageDescription.textContent = images[0].desc;
+  
+        // Update description on slide change
+        document.getElementById("projectCarousel").addEventListener("slid.bs.carousel", function (event) {
+          const activeItem = event.relatedTarget;
+          imageDescription.textContent = activeItem.getAttribute("data-description");
+        });
+  
+        projectModal.show();
+      });
+    });
+  });
   

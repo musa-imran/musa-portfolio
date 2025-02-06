@@ -71,6 +71,7 @@ html {
   color: #fff; /* Default text color */
   text-decoration: none;
   transition: color 0.3s ease-in-out; /* Smooth color transition */
+  transition: .3s ease-in-out;
 }
 
 .navbar-nav .nav-link:hover {
@@ -79,6 +80,7 @@ html {
 
 .navbar-nav .nav-link.active {
   color: #ff6f00; /* Active link stays orange */
+  font-weight: bold;
 }
 
 
@@ -126,47 +128,53 @@ html {
 
 
 
-.why-card {
-  border: 1px solid #ff6f00; /* Orange outline */
-  background-color: transparent;
-  color: white;
+.why-choose-me {
   text-align: center;
-  height: 200px;
-  padding: 20px;
-  border-radius: 10px;
-  transition: 0.2s ease-in-out;
+}
+
+.why-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
   margin-bottom: 20px;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255, 111, 0, 0.5); /* Subtle orange separator */
+  transition: transform 0.3s ease-in-out;
 }
 
-.why-card i {
+.why-item:last-child {
+  border-bottom: none; /* Remove border from the last item */
+}
+
+.why-item i {
   font-size: 2.5rem;
-  color: #ff6f00;
-  margin-bottom: 10px;
+  color: #ff6f00; /* Orange icon */
+  min-width: 50px;
 }
 
-.why-card h4 {
-  font-size: 1.3rem;
+.why-item h5 {
+  color: #fff;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-top: 5px;
 }
 
-.why-card p {
-  font-size: 1rem;
+.why-item small {
+  color: #ccc;
+  display: block;
+  font-size: 0.9rem;
 }
 
-.why-card:hover {
-  transform: scale(1.05); /* Slight zoom effect on hover */
-}
 
 
 
 
 .project-card {
-  border: 1px solid #ff6f00;
+  border: 2px solid #ff6f00;
   background-color: transparent;
   color: white;
   text-align: center;
   padding: 15px;
+  height: 225px;
   border-radius: 10px;
   transition: 0.2s ease-in-out;
   margin-bottom: 20px;
@@ -217,7 +225,7 @@ html {
 }
 
 .resume-download {
-  border: 1px solid #ff6f00;
+  border: 2px solid #ff6f00;
   padding: 20px;
   border-radius: 10px;
   background-color: transparent;
@@ -228,10 +236,10 @@ html {
 
 /* Services Section Styling */
 .service-card {
-  border: 1px solid #ff6f00; /* Orange outline */
+  border: 2px solid #ff6f00; /* Orange outline */
   padding: 20px;
   text-align: center;
-  height: 250px;
+  height: 275px;
   border-radius: 10px;
   transition: transform 0.3s ease-in-out;
   background: transparent;
@@ -251,9 +259,9 @@ html {
 
 /* Testimonial Card */
 .testimonial-card {
-  border: 1px groove #ff6f00; /* Orange outline */
+  border: 2px solid #ff6f00; /* Orange outline */
   padding: 20px;
-  height: 175px;
+  height: 200px;
   text-align: center;
   border-radius: 10px;
   background: transparent;
@@ -277,7 +285,6 @@ html {
 
 
 #get-started p {
-  max-width: 600px;
   margin: 0 auto;
 }
 
