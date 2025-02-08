@@ -169,12 +169,12 @@ html {
 
 
 .project-card {
-  border: 2px solid #ff6f00;
+  border: 1px solid #ff6f00;
   background-color: transparent;
   color: white;
   text-align: center;
   padding: 15px;
-  height: 400px;
+  height: 425px;
   border-radius: 10px;
   transition: 0.2s ease-in-out;
   margin-bottom: 20px;
@@ -203,8 +203,8 @@ html {
 }
 
 .project-card:hover {
-  transform: scale(1.05); /* Slight zoom effect on hover */
-
+  border: 1px solid #ff6f00;
+  box-shadow: 0 4px 20px rgba(255, 111, 0, 0.5); /* Orange shadow effect */
 }
 
 
@@ -225,7 +225,7 @@ html {
 }
 
 .resume-download {
-  border: 2px solid #ff6f00;
+  border: 1px solid #ff6f00;
   padding: 20px;
   border-radius: 10px;
   background-color: transparent;
@@ -236,12 +236,11 @@ html {
 
 /* Services Section Styling */
 .service-card {
-  border: 2px solid #ff6f00; /* Orange outline */
+  border: 1px solid #ff6f00; /* Orange outline */
   padding: 20px;
   text-align: center;
   height: 275px;
   border-radius: 10px;
-  transition: transform 0.3s ease-in-out;
   background: transparent;
 }
 
@@ -256,7 +255,7 @@ html {
 
 /* Testimonial Card */
 .testimonial-card {
-  border: 2px solid #ff6f00; /* Orange outline */
+  border: 1px solid #ff6f00; /* Orange outline */
   padding: 20px;
   height: 200px;
   text-align: center;
