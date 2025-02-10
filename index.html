@@ -99,7 +99,7 @@
               <ul class="list-unstyled text-white">
                 <li>✔ Azure DevOps</li>
                 <li>✔ Git & GitHub</li>
-                <li>✔ CI/CD</li>
+                <li>✔ CI/CD Pipelines</li>
                 <li>✔ Bitbucket</li>
               </ul>
             </div>
@@ -172,12 +172,12 @@
         <!-- Project 1 -->
         <div class="col-md-4">
           <div class="project-card">
-            <img src="assets/images/Core2.png" alt="Project 1">
+            <img src="assets/images/Core2.png">
             <div class="project-content">
-              <h4>Production Software</h4>
+              <h4>Production Management System</h4>
               <p>A robust system built in ASP.NET Core MVC & SQL Server for managing Stock Inventory, Orders, Customers and more.</p>
               <button class="btn btn-outline-orange view-details-btn"
-                data-title="Production Software"
+                data-title="Production Management System"
                 data-images='[
                   {"src": "assets/images/Core3.png", "desc": "User Login Screen"},
                   {"src": "assets/images/Core2.png", "desc": "Sales Order Management"},
@@ -189,7 +189,7 @@
                   {"src": "assets/images/Core8.png", "desc": "Stock Inventory Management"}
                 ]'
                 data-bs-toggle="modal" data-bs-target="#projectModal">
-                View Details
+                 Details
               </button>
             </div>
           </div>
@@ -198,19 +198,20 @@
         <!-- Project 2 -->
         <div class="col-md-4">
           <div class="project-card">
-            <img src="assets/images/project2-1.jpg" alt="Project 2">
+            <img src="assets/images/rdlc1.png">
             <div class="project-content">
-              <h4>E-Commerce Website</h4>
-              <p>Fully functional e-commerce website built with ASP.NET MVC.</p>
+              <h4>RDLC Invoicing Software</h4>
+              <p>Dynamic invoice generating software to manage customers, items and invoices built with ASP.NET & RDLC.</p>
               <button class="btn btn-outline-orange view-details-btn"
-                data-title="E-Commerce Platform"
+                data-title="RDLC Invoicing Software"
                 data-images='[
-                  {"src": "assets/images/project2-1.jpg", "desc": "Home page featuring latest products and deals."},
-                  {"src": "assets/images/project2-2.jpg", "desc": "Product listing with filtering and sorting options."},
-                  {"src": "assets/images/project2-3.jpg", "desc": "Checkout and payment integration with Stripe."}
+                  {"src": "assets/images/rdlc1.png", "desc": "Dashboard Page for analytics and quick menu"},
+                  {"src": "assets/images/rdlc2.png", "desc": "Invoice Items Management"},
+                  {"src": "assets/images/rdlc3.png", "desc": "List of generated invoices to print"},
+                  {"src": "assets/images/rdlc4.png", "desc": "Invoice Creation Form"}
                 ]'
                 data-bs-toggle="modal" data-bs-target="#projectModal">
-                View Details
+                 Details
               </button>
             </div>
           </div>
@@ -235,40 +236,44 @@
                   {"src": "assets/images/pos-diagram.png", "desc": "Database Diagram"}
                 ]'
                 data-bs-toggle="modal" data-bs-target="#projectModal">
-                View Details
+                 Details
               </button>
             </div>
           </div>
         </div>
-  
       </div>
     </div>
   </section>
   
   <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl">
-    <div class="modal-content bg-dark text-white">
-      <div class="modal-header">
-        <h5 class="modal-title" id="projectModalLabel"></h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <!-- Image Carousel -->
-        <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner" id="carouselImages"></div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon bg-light-dark" aria-hidden="true"></span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon bg-light-dark" aria-hidden="true"></span>
-          </button>
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content bg-dark text-white">
+        <div class="modal-header">
+          <h5 class="modal-title" id="projectModalLabel"></h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <!-- Image Description -->
-        <p class="mt-3 text-center" id="imageDescription"></p>
+        <div class="modal-body">
+          <!-- Image Carousel -->
+          <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner" id="carouselImages"></div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon bg-light-dark" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon bg-light-dark" aria-hidden="true"></span>
+            </button>
+          </div>
+          <!-- Image Description -->
+          <p class="mt-3 text-center" id="imageDescription"></p>
+          <!-- View Image Button -->
+          <div class="text-center mt-3">
+            <a id="viewImageBtn" href="#" target="_blank" class="btn btn-outline-orange btn-sm"><i class="fa fa-eye"></i> View Image</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  </div>
+  
 
 
 
@@ -331,8 +336,8 @@
           <!-- Testimonial 1 -->
           <div class="carousel-item active">
             <div class="testimonial-card">
-              <p class="text-white">"A very good developer, there are very few of them on the platform. We contacted him, he told us everything, we agreed, and he did everything perfectly in the shortest possible time. In a word, it's unbeatable."</p>
-              <h5 class="text-orange">Maksym Basok</h5>
+              <small class="text-white">"A very good developer, there are very few of them on the platform. We contacted him, he told us everything, we agreed, and he did everything perfectly in the shortest possible time. In a word, it's unbeatable."</small>
+              <h5 class="text-orange mt-3">Maksym Basok</h5>
               <span class="text-white">Ukraine</span>
             </div>
           </div>
@@ -340,8 +345,8 @@
           <!-- Testimonial 2 -->
           <div class="carousel-item">
             <div class="testimonial-card">
-              <p class="text-white">"Highly professional and skilled! The development was seamless and perfectly integrated with our system."</p>
-              <h5 class="text-orange">Festus Mutua</h5>
+              <small class="text-white">"Highly professional and skilled! The development was seamless and perfectly integrated with our system."</small>
+              <h5 class="text-orange mt-3">Festus Mutua</h5>
               <span class="text-white">Kenya</span>
             </div>
           </div>
@@ -349,12 +354,11 @@
           <!-- Testimonial 3 -->
           <div class="carousel-item">
             <div class="testimonial-card">
-              <p class="text-white">"The work Musa did for our company improved performance significantly. Highly recommend his expertise!"</p>
-              <h5 class="text-orange">Ben Carter</h5>
+              <small class="text-white">"The work Musa did for our company improved performance significantly. Highly recommend his expertise!"</small>
+              <h5 class="text-orange mt-3">Ben Carter</h5>
               <span class="text-white">U.S.A</span>
             </div>
           </div>
-  
         </div>
   
         <!-- Carousel Controls -->

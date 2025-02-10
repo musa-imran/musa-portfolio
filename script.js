@@ -68,40 +68,39 @@
 
 
   document.addEventListener("DOMContentLoaded", function () {
-    const projectModal = new bootstrap.Modal(document.getElementById("projectModal"));
+    const modal = document.getElementById("projectModal");
+    const carouselInner = document.getElementById("carouselImages");
+    const modalTitle = document.getElementById("projectModalLabel");
+    const imageDescription = document.getElementById("imageDescription");
+    const viewImageBtn = document.getElementById("viewImageBtn");
   
     document.querySelectorAll(".view-details-btn").forEach(button => {
       button.addEventListener("click", function () {
         const title = this.getAttribute("data-title");
         const images = JSON.parse(this.getAttribute("data-images"));
   
-        document.getElementById("projectModalLabel").textContent = title;
-  
-        // Populate Carousel
-        const carouselInner = document.getElementById("carouselImages");
-        const imageDescription = document.getElementById("imageDescription");
-        carouselInner.innerHTML = ""; // Clear existing images
-  
-        images.forEach((img, index) => {
-          const activeClass = index === 0 ? "active" : "";
-          carouselInner.innerHTML += `
-            <div class="carousel-item ${activeClass}" data-description="${img.desc}">
-              <img src="${img.src}" class="d-block w-100" alt="${title}">
-            </div>
-          `;
-        });
-  
-        // Set initial image description
+        modalTitle.textContent = title;
+        carouselInner.innerHTML = "";
         imageDescription.textContent = images[0].desc;
+        viewImageBtn.href = images[0].src; // Default to first image
   
-        // Update description on slide change
-        document.getElementById("projectCarousel").addEventListener("slid.bs.carousel", function (event) {
-          const activeItem = event.relatedTarget;
-          imageDescription.textContent = activeItem.getAttribute("data-description");
+        images.forEach((image, index) => {
+          const isActive = index === 0 ? "active" : "";
+          const slide = `
+            <div class="carousel-item ${isActive}">
+              <img src="${image.src}" class="d-block w-100" alt="${image.desc}">
+            </div>`;
+          carouselInner.innerHTML += slide;
         });
   
-        projectModal.show();
+        // Update the "View Image" button when a slide changes
+        document.querySelector("#projectCarousel").addEventListener("slid.bs.carousel", function (event) {
+          const currentIndex = event.to;
+          imageDescription.textContent = images[currentIndex].desc;
+          viewImageBtn.href = images[currentIndex].src;
+        });
       });
     });
   });
+  
   
