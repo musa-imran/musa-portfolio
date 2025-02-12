@@ -308,3 +308,43 @@ html {
   color: #e65c00;
   transition:0.3s ease-in-out;
 }
+
+
+
+
+
+.moving-headline {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.scroll-container {
+  display: flex;
+  gap: 50px; /* Space between repeated text */
+  animation: scrollText 25s linear infinite;
+}
+
+.scroll-container small {
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .scroll-container {
+    animation: scrollText 10s linear infinite;
+  }
+  .scroll-container small {
+    font-size: 14px; /* Ensures readability on small screens */
+  }
+}
