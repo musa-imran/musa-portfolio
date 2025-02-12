@@ -348,3 +348,80 @@ html {
     font-size: 14px; /* Ensures readability on small screens */
   }
 }
+
+
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.social-buttons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  min-width: 160px;
+  border: 2px solid;
+  background: transparent;
+}
+
+/* WhatsApp Button */
+.btn-whatsapp {
+  color: #25d366;
+  border-color: #25d366;
+}
+.btn-whatsapp:hover {
+  background: #25d366;
+  color: white;
+}
+
+/* Fiverr Button */
+.btn-fiverr {
+  color: #1dbf73;
+  border-color: #1dbf73;
+}
+.btn-fiverr:hover {
+  background: #1dbf73;
+  color: white;
+}
+
+/* LinkedIn Button */
+.btn-linkedin {
+  color: #0077b5;
+  border-color: #0077b5;
+}
+.btn-linkedin:hover {
+  background: #0077b5;
+  color: white;
+}
+
+/* Gmail Button */
+.btn-gmail {
+  color: #d44638;
+  border-color: #d44638;
+}
+.btn-gmail:hover {
+  background: #d44638;
+  color: white;
+}
+
+
+.btn-github {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+.btn-github:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+/* Icon Styling */
+.social-buttons i {
+  margin-right: 8px;
+  font-size: 20px;
+}
