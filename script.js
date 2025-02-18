@@ -105,17 +105,58 @@
 
 
 
+  async function trackResumeDownload() {
+    let downloadCount = parseInt(localStorage.getItem("resumeDownloads")) || 0;
+    downloadCount++;
+    localStorage.setItem("resumeDownloads", downloadCount);
+    document.getElementById("resumeDownloadCounter").innerText = downloadCount;
+  }
+
+  async function showDownloadCountForMe() {
+    try {
+      let response = await fetch("https://api.ipify.org?format=json");
+      let data = await response.json();
+      let myIP = "39.40.161.245"; // Replace this with your IP
+
+      if (data.ip === myIP) {
+        document.getElementById("resumeDownloadCounterContainer").style.display = "block";
+      }
+    } catch (error) {
+      console.error("Error fetching IP:", error);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("resumeDownloadCounter").innerText =
+      localStorage.getItem("resumeDownloads") || 0;
+
+    showDownloadCountForMe();
+  });
+
+
+
+
+
+
 
   async function fetchVisitorCount() {
     try {
-      let response = await fetch('https://api.countapi.xyz/hit/musa-portfolio.com/visits');
+      let response = await fetch("https://api.ipify.org?format=json");
       let data = await response.json();
-      document.getElementById('visitorCounter').innerText = data.value;
+      let visitorIP = data.ip;
+
+      let storedIPs = JSON.parse(localStorage.getItem("visitorIPs")) || [];
+      
+      if (!storedIPs.includes(visitorIP)) {
+        storedIPs.push(visitorIP);
+        localStorage.setItem("visitorIPs", JSON.stringify(storedIPs));
+      }
+
+      document.getElementById("visitorCounter").innerText = storedIPs.length;
     } catch (error) {
       console.error("Error fetching visitor count:", error);
-      document.getElementById('visitorCounter').innerText = "Unavailable";
+      document.getElementById("visitorCounter").innerText = "Unavailable";
     }
   }
-  fetchVisitorCount();
 
-  
+  document.addEventListener("DOMContentLoaded", fetchVisitorCount);
