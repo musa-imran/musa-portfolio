@@ -239,7 +239,7 @@ html {
   border: 1px solid #ff6f00; /* Orange outline */
   padding: 20px;
   text-align: center;
-  height: 275px;
+  height: 250px;
   border-radius: 10px;
   background: transparent;
 }
@@ -424,4 +424,25 @@ html {
 .social-buttons i {
   margin-right: 8px;
   font-size: 20px;
+}
+
+
+
+
+
+
+#analytics {
+  margin-top: 50px;
+  padding: 40px;
+  color: white;
+}
+
+.visitor-count h4 {
+  font-size: 22px;
+  color: #f39c12;
+}
+
+.visitor-count p {
+  font-size: 28px;
+  font-weight: bold;
 }

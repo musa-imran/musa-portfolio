@@ -102,4 +102,20 @@
       });
     });
   });  
+
+
+
+
+  async function fetchVisitorCount() {
+    try {
+      let response = await fetch('https://api.countapi.xyz/hit/musa-portfolio.com/visits');
+      let data = await response.json();
+      document.getElementById('visitorCounter').innerText = data.value;
+    } catch (error) {
+      console.error("Error fetching visitor count:", error);
+      document.getElementById('visitorCounter').innerText = "Unavailable";
+    }
+  }
+  fetchVisitorCount();
+
   
