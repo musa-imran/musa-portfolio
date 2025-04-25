@@ -102,6 +102,17 @@
       });
     });
   });  
+  
+  document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+    link.addEventListener('click', function () {
+      const navbarToggler = document.querySelector('.navbar-toggler');
+      const navbarCollapse = document.querySelector('#navbarNav');
+
+      if (window.getComputedStyle(navbarToggler).display !== 'none') {
+        navbarToggler.click(); // Programmatically trigger the collapse
+      }
+    });
+  });
 
 
 

@@ -13,6 +13,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
   </head>
   
 <body>
@@ -31,7 +34,7 @@
 </div> -->
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top bg-dark-tone">
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top bg-dark-tone" >
   <div class="container">
     <a class="navbar-brand text-white fw-bold" href="#">
       <img src="assets/images/Musa-logo.png" style="height: 35px;">&nbsp; Musa Imran
@@ -63,7 +66,7 @@
   </section>
 
   <!-- About Section -->
-  <section id="about" class="py-5 bg-light-dark">
+  <section id="about" class="py-5 bg-light-dark" >
     <div class="container-fluid">
       <!-- Outline Text Heading -->
       <h4 class="text-center text-white mb-5 heading fw-bold">About Me</h4>
@@ -71,20 +74,18 @@
       <div class="row align-items-center">
         
         <!-- Profile Image -->
-        <div class="col-md-3 text-center">
+        <div class="col-md-3 text-center" data-aos="fade-up">
           <img src="assets/images/LinkedIn Profile Photo.png" alt="Musa Imran" class="img-fluid rounded-circle shadow-lg profile-image">
         </div>
   
         <!-- About Content -->
         <div class="col-md-9 mt-5 mt-md-0">
-          <p class="text-white">
-            I am a passionate <strong>Full Stack .NET Developer</strong> from Sialkot, Pakistan with <strong>5+ years</strong> of experience in designing and developing 
-            high-performance web applications. My expertise lies in delivering robust backend architectures, interactive UI components, and seamless 
-            database integrations to enhance business productivity.
+          <p class="text-white" data-aos="fade-up">
+            A results-driven <strong>Full Stack .NET Developer</strong> from Sialkot, Pakistan, with over <strong>5 years</strong> of experience in developing secure, scalable web applications. I specialize in building powerful backend systems with <strong>ASP.NET Core & MVC</strong>, designing responsive UIs, and integrating complex databases to deliver high-performance business solutions.
           </p>
   
           <div class="row mt-5">
-            <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up">
               <h5 class="text-purple fw-bold"><i class="fas fa-code"></i> Frontend Technologies</h5>
               <ul class="list-unstyled text-white">
                 <li>✔ HTML, CSS, JavaScript</li>
@@ -93,16 +94,16 @@
                 <li>✔ Razor Pages</li>
               </ul>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up">
               <h5 class="text-purple fw-bold"><i class="fas fa-server"></i> Backend Expertise</h5>
               <ul class="list-unstyled text-white">
                 <li>✔ ASP.NET Core & MVC</li>
-                <li>✔ C# &  Entity Framework, ADO.NET</li>
+                <li>✔ C# &  Entity Framework Core, ADO.NET</li>
                 <li>✔ SQL Server & Azure Databases</li>
                 <li>✔ RESTful APIs & Web Services</li>
               </ul>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up">
               <h5 class="text-purple fw-bold"><i class="fas fa-cloud"></i> Version Control & DevOps</h5>
               <ul class="list-unstyled text-white">
                 <li>✔ Azure DevOps</li>
@@ -126,7 +127,7 @@
       <div class="row justify-content-center text-center">
         
         <!-- Service 1: Web Development -->
-        <div class="col-xl-2 col-lg-4 col-md-6 col-sm-12 mb-4">
+        <div class="col-xl-2 col-lg-4 col-md-6 col-sm-12 mb-4" data-aos="fade-up">
           <div class="service-card">
             <img src="assets/images/NET_Core_Logo.svg.png" class="img-thumbnail rounded-circle" style="height: 75px; width: 75px;">
             <h6 class="text-white fw-bold mt-3">Software Development</h6>
@@ -135,7 +136,7 @@
         </div>
   
         <!-- Service 2: Database Management -->
-        <div class="col-xl-2 col-lg-4 col-md-6 col-sm-12 mb-4">
+        <div class="col-xl-2 col-lg-4 col-md-6 col-sm-12 mb-4" data-aos="fade-up">
           <div class="service-card">
             <img src="assets/images/database.png" class="img-thumbnail rounded-circle" style="height: 75px; width: 75px;">
             <h6 class="text-white fw-bold mt-3">Database Management</h6>
@@ -144,7 +145,7 @@
         </div>
   
         <!-- Service 3: UI/UX Development -->
-        <div class="col-xl-2 col-lg-4 col-md-6 col-sm-12 mb-4">
+        <div class="col-xl-2 col-lg-4 col-md-6 col-sm-12 mb-4" data-aos="fade-up">
           <div class="service-card">
             <img src="assets/images/programming.png" class="img-thumbnail rounded-circle" style="height: 75px; width: 75px;">
             <h6 class="text-white fw-bold mt-3">UI/UX Development</h6>
@@ -153,7 +154,7 @@
         </div>
   
         <!-- Service 4: Reporting & Analytics -->
-        <div class="col-xl-2 col-lg-4 col-md-6 col-sm-12 mb-4">
+        <div class="col-xl-2 col-lg-4 col-md-6 col-sm-12 mb-4" data-aos="fade-up">
           <div class="service-card">
             <img src="assets/images/bi.png" class="img-thumbnail rounded-circle" style="height: 75px; width: 75px;">
             <h6 class="text-white fw-bold mt-3">Reporting & Analytics</h6>
@@ -162,7 +163,7 @@
         </div>
   
         <!-- Service 5: DevOps & Deployment -->
-        <div class="col-xl-2 col-lg-4 col-md-6 col-sm-12 mb-4">
+        <div class="col-xl-2 col-lg-4 col-md-6 col-sm-12 mb-4" data-aos="fade-up">
           <div class="service-card">
             <img src="assets/images/dev.png" class="img-thumbnail rounded-circle" style="height: 75px; width: 75px;">
             <h6 class="text-white fw-bold mt-3">DevOps & Deployment</h6>
@@ -188,7 +189,7 @@
       <h4 class="text-center text-white mb-5 heading fw-bold">Project Highlights</h4>
       <div class="row">
 
-        <div class="col-xl-4 col-lg-6 col-md-12">
+        <div class="col-xl-4 col-lg-6 col-md-12" data-aos="fade-up">
           <div class="project-card">
             <img src="assets/images/Core2.png">
             <div class="project-content">
@@ -215,7 +216,7 @@
 
 
 
-        <div class="col-xl-4 col-lg-6 col-md-12">
+        <div class="col-xl-4 col-lg-6 col-md-12" data-aos="fade-up">
           <div class="project-card">
             <img src="assets/images/Screenshot (7).png">
             <div class="project-content">
@@ -241,7 +242,7 @@
         </div>
   
   
-        <div class="col-xl-4 col-lg-6 col-md-12">
+        <div class="col-xl-4 col-lg-6 col-md-12" data-aos="fade-up">
           <div class="project-card">
             <img src="assets/images/pos1.png">
             <div class="project-content">
@@ -265,7 +266,8 @@
           </div>
         </div>
 
-        <div class="col-xl-4 col-lg-6 col-md-12">
+
+        <div class="col-xl-4 col-lg-6 col-md-12" data-aos="fade-up">
           <div class="project-card">
             <img src="assets/images/Screenshot (14).png">
             <div class="project-content">
@@ -289,7 +291,7 @@
         </div>
 
 
-        <div class="col-xl-4 col-lg-6 col-md-12">
+        <div class="col-xl-4 col-lg-6 col-md-12" data-aos="fade-up">
           <div class="project-card">
             <img src="assets/images/rdlc1.png">
             <div class="project-content">
@@ -360,11 +362,11 @@
         <!-- Resume Summary -->
         <div class="col-md-8">
           <div class="resume-summary">
-            <h4 class="text-purple">Career Summary</h4>
-            <p class="text-white">
+            <h4 class="text-purple" data-aos="fade-up">Career Summary</h4>
+            <p class="text-white" data-aos="fade-up">
               I am a highly motivated and skilled <strong>Full Stack .NET Developer</strong> with over <strong>5 years</strong> of experience in developing scalable web applications. My expertise lies in <strong>ASP.NET, C#, JavaScript, SQL Server</strong>, and modern frontend technologies. Known for delivering high-quality projects within deadlines and collaborating effectively with cross-functional teams.
             </p>
-            <ul class="text-white">
+            <ul class="text-white" data-aos="fade-up">
               <li>Experienced in enterprise-level application development and deployment.</li>
               <li>Proficient in front-end and back-end technologies.</li>
               <li>Strong problem-solving skills and attention to detail.</li>
@@ -373,7 +375,7 @@
         </div>
         
         <!-- Download Resume Button -->
-        <div class="col-md-4 text-center">
+        <div class="col-md-4 text-center" data-aos="fade-up">
           <div class="resume-download">
             <i class="fas fa-file-pdf fa-3x text-purple mb-3"></i>
             <p class="text-white">Download my detailed resume for more insights into my experience and skills.</p>
@@ -403,7 +405,7 @@
       <h4 class="text-center text-white mb-5 heading fw-bold">Testimonials</h2>
       
       <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
+        <div class="carousel-inner" data-aos="fade-up"> 
           
           <!-- Testimonial 1 -->
           <div class="carousel-item active">
@@ -460,7 +462,7 @@
       <div class="row justify-content-center">
       
         <!-- Expertise & Experience -->
-        <div class="col-md-6">
+        <div class="col-md-6" data-aos="fade-up">
           <div class="why-item">
             <i class="fas fa-user-tie"></i>
             <div>
@@ -471,7 +473,7 @@
         </div>
   
         <!-- Commitment to Quality -->
-        <div class="col-md-6">
+        <div class="col-md-6" data-aos="fade-up">
           <div class="why-item">
             <i class="fas fa-cogs"></i>
             <div>
@@ -482,7 +484,7 @@
         </div>
   
         <!-- Problem-Solving Mindset -->
-        <div class="col-md-6">
+        <div class="col-md-6" data-aos="fade-up">
           <div class="why-item">
             <i class="fas fa-lightbulb"></i>
             <div>
@@ -493,7 +495,7 @@
         </div>
   
         <!-- Client Satisfaction -->
-        <div class="col-md-6">
+        <div class="col-md-6" data-aos="fade-up">
           <div class="why-item">
             <i class="fas fa-handshake"></i>
             <div>
@@ -521,14 +523,14 @@
     <section id="get-started" class="py-5 bg-light-dark text-center">
       <div class="container">
         <h4 class="text-center text-white mb-5 heading fw-bold">Let's Get Started</h2>
-          <p class="mt-3 text-light">
+          <p class="mt-3 text-light" data-aos="fade-up">
           Ready to build something amazing? Whether it's a web application, a software project, or a custom solution, 
           I'm here to help. Let's turn your ideas into reality!
         </p>
     
         <div class="social-buttons text-center mt-4">
           <!-- WhatsApp -->
-          <a href="https://api.whatsapp.com/send?phone=923063239877" target="_blank" class="btn btn-outline btn-whatsapp">
+          <a href="https://api.whatsapp.com/send?phone=923063239877" target="_blank" class="btn btn-outline btn-whatsapp" data-aos="fade-up">
             <i class="fab fa-whatsapp"></i> WhatsApp
           </a>
         
@@ -538,15 +540,15 @@
           </a> -->
         
           <!-- LinkedIn -->
-          <a href="https://www.linkedin.com/in/musa-imran-a3a3a2260/" target="_blank" class="btn btn-outline btn-linkedin">
+          <a href="https://www.linkedin.com/in/musa-imran-a3a3a2260/" target="_blank" class="btn btn-outline btn-linkedin" data-aos="fade-up">
             <i class="fab fa-linkedin"></i> LinkedIn
           </a>
         
-          <a href="https://github.com/musa-imran" target="_blank" class="btn btn-outline btn-github">
+          <a href="https://github.com/musa-imran" target="_blank" class="btn btn-outline btn-github" data-aos="fade-up">
             <i class="fab fa-github"></i> GitHub
           </a>
           <!-- Gmail -->
-          <a href="mailto:musaimran932@gmail.com" target="_blank" class="btn btn-outline btn-gmail">
+          <a href="mailto:musaimran932@gmail.com" target="_blank" class="btn btn-outline btn-gmail" data-aos="fade-up">
             <i class="fas fa-envelope"></i> Gmail
           </a>
         </div>
@@ -575,6 +577,13 @@
     
 
   <script src="script.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+
+
