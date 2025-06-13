@@ -12,7 +12,7 @@ body {
 
 .hero {
   height: 100vh;
-  background: linear-gradient(rgba(21, 0, 59, 0.7), rgba(0, 0, 0, 0.7)), url('assets/images/mKYRvwe.jpg') no-repeat center center/cover;
+  background: linear-gradient(rgba(0, 31, 71, 0.7), rgba(0, 0, 0, 0.877)), url('assets/images/mKYRvwe.jpg') no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,23 +20,23 @@ body {
 }
 
 .btn-purple {
-  background-color: #613ED8;
-  border-color: #613ED8;
+  background-color: #3363CD;
+  border-color: #3363CD;
   color: #fff;
 }
 
 .btn-purple:hover {
-  background-color: #512BC8;
-  border-color: #512BC8;
+  background-color: #2A50AD;
+  border-color: #2A50AD;
 }
 
 .btn-outline-purple {
-  border: 2px solid #613ED8;
-  color: #613ED8;
+  border: 2px solid #3363CD;
+  color: #3363CD;
 }
 
 .btn-outline-purple:hover {
-  background-color: #613ED8;
+  background-color: #3363CD;
   color: #fff;
 }
 
@@ -49,7 +49,7 @@ body {
 }
 
 .text-purple {
-  color: #613ED8;
+  color: #3363CD;
 }
 
 /* Smooth Scroll */
@@ -62,7 +62,7 @@ html {
   height: 250px;
   object-fit: cover;
   border-radius: 50%;
-  border: 2px solid #613ED8;
+  border: 2px solid #3363CD;
   padding: 6px;
 }
 
@@ -73,11 +73,11 @@ html {
 }
 
 .navbar-nav .nav-link:hover {
-  color: #613ED8;
+  color: #3363CD;
 }
 
 .navbar-nav .nav-link.active {
-  color: #613ED8;
+  color: #3363CD;
 }
 
 /* Preloader Styles */
@@ -86,7 +86,7 @@ html {
   width: 100%;
   height: 100vh;
   background-color: #121212;
-  color: #613ED8;
+  color: #3363CD;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -124,7 +124,7 @@ html {
   gap: 15px;
   margin-bottom: 20px;
   padding: 15px 0;
-  border-bottom: 1px solid rgba(97, 62, 216, 0.5);
+  border-bottom: 1px solid rgba(51, 99, 205, 0.5);
   transition: transform 0.3s ease-in-out;
 }
 
@@ -134,7 +134,7 @@ html {
 
 .why-item i {
   font-size: 2.5rem;
-  color: #613ED8;
+  color: #3363CD;
   min-width: 50px;
 }
 
@@ -150,9 +150,8 @@ html {
   font-size: 0.9rem;
 }
 
-
 .project-card {
-  border: 1px solid #613ED8;
+  border: 1px solid #3363CD;
   background-color: transparent;
   color: white;
   text-align: center;
@@ -186,11 +185,9 @@ html {
 }
 
 .project-card:hover {
-  border: 1px solid #613ED8;
-  box-shadow: 0 4px 20px #512BC8; /* Orange shadow effect */
+  border: 1px solid #3363CD;
+  box-shadow: 0 4px 20px #2A50AD;
 }
-
-
 
 .resume-summary h4 {
   font-size: 1.5rem;
@@ -207,18 +204,15 @@ html {
 }
 
 .resume-download {
-  border: 1px solid #613ED8;
+  border: 1px solid #3363CD;
   padding: 20px;
   border-radius: 10px;
   background-color: transparent;
   transition: 0.3s ease-in-out;
 }
 
-
-
-
 .service-card {
-  border: 1px solid #613ED8;
+  border: 1px solid #3363CD;
   padding: 20px;
   text-align: center;
   height: 250px;
@@ -228,19 +222,19 @@ html {
 }
 
 .service-card:hover{
-  border: 1px solid #613ED8;
-  box-shadow: 0 4px 20px #512BC8; /* Orange shadow effect */
+  border: 1px solid #3363CD;
+  box-shadow: 0 4px 20px #2A50AD;
 }
 
 .service-icon {
   font-size: 3rem;
-  color: #613ED8;
+  color: #3363CD;
   margin-bottom: 15px;
 }
 
 /* Testimonial */
 .testimonial-card {
-  border: 1px solid #613ED8;
+  border: 1px solid #3363CD;
   padding: 20px;
   text-align: center;
   border-radius: 10px;
@@ -251,7 +245,7 @@ html {
 
 /* Contact */
 .contact-info i {
-  color: #613ED8;
+  color: #3363CD;
   margin-right: 8px;
 }
 
@@ -267,7 +261,7 @@ html {
 }
 
 .social-icon:hover {
-  color: #512BC8;
+  color: #2A50AD;
   transition: 0.3s ease-in-out;
 }
 
