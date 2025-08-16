@@ -117,3 +117,25 @@
 
 
   
+
+
+
+
+
+
+
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const logos = document.querySelectorAll(".tech-logo");
+    let current = 0;
+
+    function showNextLogo() {
+      logos.forEach(logo => logo.classList.remove("active"));
+      logos[current].classList.add("active");
+      current = (current + 1) % logos.length;
+    }
+
+    showNextLogo();
+    setInterval(showNextLogo, 2000); // change logo every 2s
+  });
