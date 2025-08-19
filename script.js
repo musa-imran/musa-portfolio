@@ -121,21 +121,27 @@
 
 
 
+const wrapper = document.querySelector(".tech-scroll-wrapper");
+const logos = wrapper.innerHTML; // store original logos
+let repeated = "";
+
+// repeat 100 times
+for (let i = 0; i < 100; i++) {
+  repeated += logos;
+}
+
+wrapper.innerHTML = repeated;
 
 
+function setScrollSpeed() {
+  const singleWidth = wrapper.scrollWidth / 2; // width of original set only
+  const speed = 100; // pixels per second
+  const duration = singleWidth / speed;
 
+  // Animate across one full set → seamless loop
+  wrapper.style.animationDuration = `${duration}s`;
+  wrapper.style.setProperty("--scroll-distance", `-${singleWidth}px`);
+}
 
-
-  document.addEventListener("DOMContentLoaded", () => {
-    const logos = document.querySelectorAll(".tech-logo");
-    let current = 0;
-
-    function showNextLogo() {
-      logos.forEach(logo => logo.classList.remove("active"));
-      logos[current].classList.add("active");
-      current = (current + 1) % logos.length;
-    }
-
-    showNextLogo();
-    setInterval(showNextLogo, 2000); // change logo every 2s
-  });
+setScrollSpeed();
+window.addEventListener("resize", setScrollSpeed);

@@ -377,21 +377,20 @@ html {
 
 .tech-stack {
   width: 100%;
-  padding: 40px 0;
   overflow: hidden;
-  position: relative;
   background: #000;
+  padding: 40px 0;
 }
 
 .tech-scroll-wrapper {
   display: flex;
-  gap: 30px;
-  animation: scrollLogos 30s linear infinite;
+  gap: 20px;
+  will-change: transform;
+  animation: scrollLogos linear infinite;
 }
 
 .tech-logo {
   height: 50px;
-  width: auto;
   margin: 0 40px;
   transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
 }
@@ -405,11 +404,14 @@ html {
   filter: none;
 }
 
-/* Keyframes: move from right to left, then reset instantly */
 @keyframes scrollLogos {
-  0%   { transform: translateX(100%); }
-  100% { transform: translateX(-150%); }
+  from { transform: translateX(0); }
+  to   { transform: translateX(var(--scroll-distance)); }
 }
+
+
+
+
 
 
 
